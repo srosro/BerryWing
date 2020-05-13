@@ -40,3 +40,5 @@ There are also some interesting flying platforms:
 We also need to start thinking about pitot tubes.  Looks like there's some prior art on an Arduino [over at MarkerPortal](https://makersportal.com/blog/2019/02/06/arduino-pitot-tube-wind-speed-theory-and-experiment).  There's also [this documentation](https://ardupilot.org/plane/docs/airspeed.html) over at [Ardupilot](https://ardupilot.org/plane/index.html).
 
 Also... Ardupilot.  Holy smokes.  It's now the closest thing to the product we've considered.  The have a list of ready-to-fly options...
+
+Autonomous power line inspections with image processing might be a possible use case...[see this thread with my cousin Jeremy](https://github.com/srosro/BerryWing/blob/master/assets/autonomous-power-line-monitoring-use-case.png?raw=true).
