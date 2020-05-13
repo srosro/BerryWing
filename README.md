@@ -1,7 +1,7 @@
 # BerryWing
 A sandbox to build an autonomous drone in.
 
-![Banner](https://github.com/srosro/supradrone/blob/master/assets/supradrone.png?raw=true)
+![Banner](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/berrywing.jpg)
 
 ## What I'm thinking:
 I have this Raspberry Pi 2 Model B.  It has a wifi USB dongle and a 64 GB micro SD card.  I'm wondering...can I put this thing in the air? autonomously?
