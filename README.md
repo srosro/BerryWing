@@ -1,4 +1,4 @@
-# supradrone
+# BerryWing
 A sandbox to build an autonomous drone in.
 
 ![Banner](https://github.com/srosro/supradrone/blob/master/assets/supradrone.png?raw=true)
