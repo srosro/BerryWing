@@ -1,6 +1,7 @@
 # supradrone
 A sandbox to build an autonomous drone in.
 
+![Banner](https://github.com/srosro/supradrone/blob/master/assets/supradrone.png?raw=true)
 
 ## What I'm thinking:
 I have this Raspberry Pi 2 Model B.  It has a wifi USB dongle and a 64 GB micro SD card.  I'm wondering...can I put this thing in the air? autonomously?
@@ -29,3 +30,4 @@ There are some interesting Raspberry Pi drones already out there:
 * [DIY FPV Drone 4-axis Quadcopter Kit S500 Frame + FS-i6 Flight Control + Raspberry Pi + 920KV Motor + GPS](https://www.amazon.com/4-axis-Quadcopter-Flight-Control-Raspberry/dp/B07R7DLQGK) on Amazon.
 * [Pi0drone: A $200 Smart Drone with the Pi Zero](https://www.hackster.io/12590/pi0drone-a-200-smart-drone-with-the-pi-zero-4fec08)
 * [Instructables Raspberry Pi Drone](https://www.instructables.com/id/The-Drone-Pi/)
+* [£300 autonomous drone with DJI Flamewheel & Ardupilot](https://medium.com/the-reading-room/how-to-build-an-autonomous-drone-for-less-than-300-80ebeb2b1db8)
