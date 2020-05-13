@@ -35,3 +35,8 @@ There are also some interesting flying platforms:
 * [2 meter wingspan, 670g payload](https://www.banggood.com/Believer-1960mm-Wingspan-EPO-Twin-Motor-Aerial-Survey-Aircraft-FPV-Platform-Mapping-RC-Airplane-KIT-p-1178800.html)
 * [1.5m wingspan, "self correcting tendencies"](https://www.readymaderc.com/products/details/strix-stratosurfer-pnp)
 * [2m wingspan, more advanced drone, unknown payload](https://www.readymaderc.com/products/details/rmrc-anaconda-kit)
+* Long term we'll probably need something with a 3-4m wingspan [like the Penguin](https://www.uavfactory.com/product/46) (10kg payload).
+
+We also need to start thinking about pitot tubes.  Looks like there's some prior art on an Arduino [over at MarkerPortal](https://makersportal.com/blog/2019/02/06/arduino-pitot-tube-wind-speed-theory-and-experiment).  There's also [this documentation](https://ardupilot.org/plane/docs/airspeed.html) over at [Ardupilot](https://ardupilot.org/plane/index.html).
+
+Also... Ardupilot.  Holy smokes.  It's now the closest thing to the product we've considered.  The have a list of ready-to-fly options...
