@@ -79,3 +79,26 @@ Loop Time  0.03 # ACCX Angle 171.97 ACCY Angle 177.39 #  	# GRYX Angle -5.38  GY
 ```
 
 If you're having problems with the board responding (e.g. IOError: [Errno 121] Remote I/O error) [wedge a watch strap under it](https://github.com/srosro/BerryWing/blob/master/sams_journal.md).
+
+
+### Graceful shutdown with a push-button switch:
+There's no power switch on the raspberry pi (a pet peeve of mine).  Kids are always unplugging things, and I hate it when my Pi is unplugged while running!
+
+It's easy to set up a "shutdown" switch (though you'll still have to power-cycle to start the pi):
+
+Wire the [small black momentary push button switch](https://www.sparkfun.com/products/9190) between GPIO21 & GND on the Raspberry Pi.  Then:  
+
+```
+apt-get install python3, python3-pip
+pip3 install gpiozero
+chmod a+x ~/berrywing/helloworld/shutdown-press.py
+sudo nano /etc/rc.local
+```
+
+and add this line before ```exit 0``` at the end of rc.local:
+
+```
+sudo -H -u pi /usr/bin/python3 /home/pi/berrywing/helloworld/shutdown-press.py &
+```
+
+[More details here](https://github.com/TonyLHansen/raspberry-pi-safe-off-switch).s

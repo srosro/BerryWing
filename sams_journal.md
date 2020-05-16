@@ -1,6 +1,6 @@
 
 ## Journal
-### Day 1
+### Day 1 - Hooked up Ultrasonic sensor & servo:
 Breadboard kit arrived.  After much gnashing of teeth I learned that GPIO doesn't switch to hot, but instead switches to ground.  That took much longer than it should've - mostly because I don't have my voltmeter with me.  After all that I was able to flash an LED (```helloworld_LED.py```)
 
 After that things progressed quickly.  I was able to hook up the ultrasonic sensor to the servo (```helloworld_ultraservo.py```).  As the "ground" approaches the ultrasonic sensor, the servo changes position (to adjust flight path accordingly).
@@ -8,7 +8,7 @@ After that things progressed quickly.  I was able to hook up the ultrasonic sens
 [![](http://img.youtube.com/vi/hOCjklzRYUM/0.jpg)](http://www.youtube.com/watch?v=hOCjklzRYUM "First day - journal entry")
 
 
-### Day 2:
+### Day 2 - 'Competitive' research:
 There are some interesting Raspberry Pi drones already out there:
 * [Pi Zero Plane](https://www.instructables.com/id/Pi-Zero-Plane-a-150-Smart-Fixed-Wing-Drone-With-th/) (this is the closest to what I'm looking to build).
 * [DIY FPV Drone 4-axis Quadcopter Kit S500 Frame + FS-i6 Flight Control + Raspberry Pi + 920KV Motor + GPS](https://www.amazon.com/4-axis-Quadcopter-Flight-Control-Raspberry/dp/B07R7DLQGK) on Amazon.
@@ -29,7 +29,7 @@ Also... Ardupilot.  Holy smokes.  It's now the closest thing to the product we'v
 Autonomous power line inspections with image processing might be a possible use case...[see this thread with my cousin Jeremy](https://github.com/srosro/BerryWing/blob/master/assets/autonomous-power-line-monitoring-use-case.png?raw=true).
 
 
-### Day 4
+### Day 3 - Problems with BerryIMUv2:
 I was having problems getting the BerryIMUv2-10DOF and get it to respond (even though the device was detected):
 
 ```
@@ -53,7 +53,11 @@ Traceback (most recent call last):
 IOError: [Errno 121] Remote I/O error
 ```
 
-Found the problem: pins were not making secure contact with the board.  Wedging a watch strap under the board to push it towards the pins fixed the issue:
+### Day 4 - Got the BerryIMUv2 to respond:
+
+Found the problem: pins were not making secure contact with the board.  
+
+Once I get my soldering gun, this will be a non-issue.  In the meantime, wedging a watch strap under the board to push it towards the pins fixed the issue:
 
 ![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/watch-wedge.png)
 
@@ -89,11 +93,33 @@ Temperature in Fahrenheit : 74.48 F
 Pressure : 947.90 hPa
 ```
 
+#### I also added a shutdown switch:
+
+```
+apt-get install python3, python3-pip
+pip3 install gpiozero
+chmod a+x ~/berrywing/helloworld/shutdown-press.py
+sudo nano /etc/rc.local
+```
+
+and add this line before ```exit 0``` at the end of rc.local:
+
+```
+sudo -H -u pi /usr/bin/python3 /home/pi/berrywing/helloworld/shutdown-press.py &
+```
+
+
 # Packages I'm installing that might be important.
 I should probably put these into a python environment...
 
 These might be useful to interface with the BerryIMU:
 * ```pip3 install lsm9ds1-rjg, RPi.GPIO```
+
+For the shutdown button:
+```
+apt-get install python3, python3-pip
+pip3 install gpiozero
+```
 
 Also, this stuff:
 

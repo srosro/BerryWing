@@ -1,22 +1,21 @@
 # Example python pinout program
+# This will blink an LED every two seconds.
+
+# Connect HOT (long wire) on the LED to 3.3v The GND on LED (short wire) should
+# be connected to this pin (which will short to ground programmatically):
+LED_GPIO = 20
 
 import time
 import RPi.GPIO as gpio
+
 gpio.setmode(gpio.BCM)
-gpio.setup(21, gpio.OUT)
+gpio.setup(LED_GPIO, gpio.OUT)
 
-
-print "Cleaning up..."
-gpio.cleanup()
-print "Trying again..."
-gpio.setmode(gpio.BCM)
-gpio.setup(21, gpio.OUT)
-
-
-while True:
-    gpio.output(21, gpio.HIGH)
-    print "Now high"
-    time.sleep(2)
-    gpio.output(21, gpio.LOW)
-    print "Now low"
-    time.sleep(2)
+try:
+    while True:
+        gpio.output(LED_GPIO, gpio.HIGH) #LED Off
+        time.sleep(2)
+        gpio.output(LED_GPIO, gpio.LOW) #LED On
+        time.sleep(2)
+except KeyboardInterrupt:
+    gpio.cleanup()
