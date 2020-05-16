@@ -71,9 +71,9 @@ Temperature: 82.7 C
 Pressure: -43889.54 hPa
 ```
 
-Now I need to work on calibartion...as it's not 82.7 deg C in here...
+Now I need to work on calibration...as it's not 82.7 deg C in here...
 
-# Packages I'm installing that might be imporant.
+# Packages I'm installing that might be important.
 I should probably put these into a python environment...
 
 * lsm9ds1-rjg (actually, probably not needed)

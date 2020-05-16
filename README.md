@@ -64,3 +64,6 @@ From there, download the sample scrips and run one:
 ```
 $ git clone http://github.com/ozzmaker/BerryIMU.git
 $ sudo python ./BerryIMU/python-BMP180-temperature-pressure/bmp180.py
+```
+
+If you're having problems with the board responding (e.g. IOError: [Errno 121] Remote I/O error) [wedge a watch strap under it](https://github.com/srosro/BerryWing/blob/master/sams_journal.md).
