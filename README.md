@@ -60,10 +60,22 @@ $ sudo i2cdetect -y 1
 70: -- -- -- -- -- -- -- 77
 ```
 
-From there, download the sample scrips and run one:
+From there, download the sample scrips and run some:
 ```
 $ git clone http://github.com/ozzmaker/BerryIMU.git
-$ sudo python ./BerryIMU/python-BMP180-temperature-pressure/bmp180.py
+$ python ./BerryIMU/python-BMP280-temperature-pressure/bmp280.py
+
+Temperature in Celsius : 23.60 C
+Temperature in Fahrenheit : 74.48 F
+Pressure : 947.90 hPa
+
+$ python ./BerryIMU/python-BerryIMU-gryo-accel-compass/berryIMU-simple.py
+
+Found LSM9DS1
+Loop Time  0.00 # ACCX Angle 171.88 ACCY Angle 177.32 #  	# GRYX Angle -0.03  GYRY Angle -0.01  GYRZ Angle -0.00 # 	# CFangleX Angle 103.12   CFangleY Angle 106.39 #	# HEADING 322.07  tiltCompensatedHeading 307.77 #
+Loop Time  0.03 # ACCX Angle 172.03 ACCY Angle 177.32 #  	# GRYX Angle -4.82  GYRY Angle -2.02  GYRZ Angle -0.67 # 	# CFangleX Angle 171.83   CFangleY Angle 177.24 #	# HEADING 324.22  tiltCompensatedHeading 310.00 #
+Loop Time  0.03 # ACCX Angle 171.97 ACCY Angle 177.39 #  	# GRYX Angle -5.38  GYRY Angle -2.25  GYRZ Angle -0.69 # 	# CFangleX Angle 171.78   CFangleY Angle 177.31 #	# HEADING 324.67  tiltCompensatedHeading 309.89 #
+...
 ```
 
 If you're having problems with the board responding (e.g. IOError: [Errno 121] Remote I/O error) [wedge a watch strap under it](https://github.com/srosro/BerryWing/blob/master/sams_journal.md).
