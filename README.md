@@ -25,7 +25,7 @@ I've bought:
 
 ### Servo that responds to ultrasonic sensor:
 
-![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/ultrasonic_servo_wiring.png)
+![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/ultrasonic-servo-wiring.png)
 
 Make sure the following devices are connected to GPIO (e.g. with the breadboard and ribbon cable):
 
@@ -42,7 +42,7 @@ Make sure the following devices are connected to GPIO (e.g. with the breadboard 
 Then run ```$ python helloworld_ultraservo.py```
 
 
-### Getting tempeature ready from the BerryIMUv2-10DOF:
+### Getting temperature & pressure from the BerryIMUv2-10DOF:
 
 * [Wiring guide](https://ozzmaker.com/berryimu-quick-start-guide/#BerryIMU%20wiring)
 * [Enable i2c and confirm board is connected](https://ozzmaker.com/i2c/)
