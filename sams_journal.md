@@ -58,7 +58,7 @@ Found the problem: pins were not making secure contact with the board.  Wedging 
 ![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/watch-wedge.png)
 
 ```
-$ sudo python ./python-BMP180-temperature-pressure/bmp180.py
+$ python ./python-BMP180-temperature-pressure/bmp180.py
 Chip Id: 88 Version: 0
 
 Reading calibration data...
@@ -69,14 +69,31 @@ Calculating pressure...
 
 Temperature: 82.7 C
 Pressure: -43889.54 hPa
+
+$ python ./python-BerryIMU-gryo-accel-compass/berryIMU-simple.py
+
+Found LSM9DS1
+Loop Time  0.00 # ACCX Angle 171.88 ACCY Angle 177.32 #  	# GRYX Angle -0.03  GYRY Angle -0.01  GYRZ Angle -0.00 # 	# CFangleX Angle 103.12   CFangleY Angle 106.39 #	# HEADING 322.07  tiltCompensatedHeading 307.77 #
+Loop Time  0.03 # ACCX Angle 171.92 ACCY Angle 177.41 #  	# GRYX Angle -0.31  GYRY Angle -0.14  GYRZ Angle -0.01 # 	# CFangleX Angle 144.29   CFangleY Angle 148.95 #	# HEADING 323.16  tiltCompensatedHeading 309.02 #
+Loop Time  0.03 # ACCX Angle 172.07 ACCY Angle 177.28 #  	# GRYX Angle -0.61  GYRY Angle -0.25  GYRZ Angle -0.02 # 	# CFangleX Angle 160.84   CFangleY Angle 165.90 #	# HEADING 323.64  tiltCompensatedHeading 309.14 #
+Loop Time  0.03 # ACCX Angle 171.95 ACCY Angle 177.43 #  	# GRYX Angle -0.90  GYRY Angle -0.37  GYRZ Angle -0.02 # 	# CFangleX Angle 167.39   CFangleY Angle 172.77 #	# HEADING 324.68  tiltCompensatedHeading 309.96 #
+...
 ```
 
-Now I need to work on calibration...as it's not 82.7 deg C in here...
+Now I need to work on calibration...as it's not 82.7 deg C in here...  <b>EDIT</b>: Figured it out, device is the BMP280, but the script I ran was the BMP180.  The BMP280 script works:
+
+```
+$ python ./python-BMP280-temperature-pressure/bmp280.py
+Temperature in Celsius : 23.60 C
+Temperature in Fahrenheit : 74.48 F
+Pressure : 947.90 hPa
+```
 
 # Packages I'm installing that might be important.
 I should probably put these into a python environment...
 
-* lsm9ds1-rjg (actually, probably not needed)
+These might be useful to interface with the BerryIMU:
+* ```pip3 install lsm9ds1-rjg, RPi.GPIO```
 
 Also, this stuff:
 
