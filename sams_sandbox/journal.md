@@ -126,7 +126,7 @@ Okay, going to take some time to write out what I know so far:
 Airbus, Rolls Royce, Wright Electric are all building prototypes - but nothing is close to production.
 
 *  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).
-
+* Not electric, but [Jetpack Aviation sells a human jetpack](https://jetpackaviation.com/jetpacks/).
 
 #### 3D imaging:
 
@@ -136,7 +136,7 @@ The standard of art is LIDAR + imaging, which is already being used in the power
 * The city of Christchurch worked with [AAM Group](http://www.aamgroup.com/index-nz.htm) to [use LIDAR and imaging](https://smartchristchurch.org.nz/project/christchurch-cbd-models-and-visualisations/) to create a [3D model of the city](http://cccbeforeafter.digitalnewzealand.info).
 * The [iPad 3D Camera/LIDAR system](https://www.theverge.com/2020/4/16/21223626/ipad-pro-halide-camera-lidar-sensor-augmented-reality-scanning) will be coming out on the iPhone 12 and seems like it will dramatically change this space.
 
-#### Power line imaging
+#### Power line imaging:
 * The common solution is LIDAR + photography ([like this](https://greenvalleyintl.com/applications/power-line-inspection-using-airborne-lidar/))
 * [These people](https://www.flytechuav.com) [don't use LIDAR](https://www.suasnews.com/2019/08/how-photogrammetry-will-replace-lidar-in-transmission-line-inspections/).  They do not use LIDAR.  Their business model is to [sell the hardware](https://www.flytechuav.com/uav-birdie.html) which would be different than what I was thinking.
 * PG&E pays [~1.25bn / year to inspect power lines](https://www.courthousenews.com/utility-watchdog-oks-pge-wildfire-preventioin-plan/).
