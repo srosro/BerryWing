@@ -108,34 +108,35 @@ and add this line before ```exit 0``` at the end of rc.local:
 sudo -H -u pi /usr/bin/python3 /home/pi/berrywing/helloworld/shutdown-press.py &
 ```
 
+### Day 5 - More research:
 
-# Packages I'm installing that might be important.
-I should probably put these into a python environment...
+Okay, going to take some time to write out what I know so far:
 
-These might be useful to interface with the BerryIMU:
-* ```pip3 install lsm9ds1-rjg, RPi.GPIO```
+#### Autonomous flight:
+* [Zipline](https://flyzipline.com/) is the leading startup in this space, and [now valued at 1BN+](https://www.cnbc.com/2019/05/17/zipline-medical-delivery-drone-start-up-now-valued-at-1point2-billion.html)
+* [Ardupilot](https://ardupilot.org/) is the leading open source community for autonomous drones.
+* [Pixhawk](https://pixhawk.org/) = an open source flight controller. Seems like a very useful interface between the Raspberry Pi and the control surfaces of the plane.
+* Ardupilot worked with Pixhawk to build the [Pixhawk 2.1 Cube](https://www.amazon.com/Standard-Carrier-Board-Pixhawk-2-1/dp/B071L846SN/), which was a massive improvement on the original [Pixhawk](https://www.amazon.com/Readytosky-Pixhawk-Controller-Autopilot-Splitter/dp/B07CHQ7SZ4?ref_=fsclp_pl_dp_1)
+* Ardupilot had a falling out with Pixhawk.  Pixhawk went on to build the Pixhawk 4, which seems to be [regarded as inferior to the Pixhawk 2.1 Cube](https://www.youtube.com/watch?v=C6WxNIzl8HU).
+* The leading option seems to be the [Pixhawk 2.1 Orange Cube](https://www.amazon.com/Orange-Standard-ADS-B-Carrier-Board/dp/B0842XYLGR/ref=pd_sbs_21_1/140-1966626-6294832)
+* [Connecting Raspberry Pi w/ Pixhawk and Communicating via MAVLink Protocol](https://www.youtube.com/watch?v=DGAB34fJQFc) or [this video](https://www.youtube.com/watch?v=cZVNndOaYCE) both cover connecting to the original Pixhawk.
 
-For the shutdown button:
-```
-apt-get install python3, python3-pip
-pip3 install gpiozero
-```
 
-Also, this stuff:
+#### Electric Human Flight:
+Airbus, Rolls Royce, Wright Electric are all building prototypes - but nothing is close to production.
 
-```
-history | grep apt-get
+*  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).
 
-6  sudo apt-get install python-rpi.gpio
-8  sudo apt-get install vim
-29  sudo apt-get install i2c-tools libi2c-dev python-smbus
-48  sudo apt-get install python-smbus
-145  sudo apt-get install python-pip
-171  sudo apt-get install cmake
-172  sudo apt-get install python-dev
-171  sudo apt-get install cmake
-172  sudo apt-get install python-dev
-251  apt-get search pip
-255  apt-get install python3-pip
-256  sudo apt-get install python3-pip
-```
+
+#### 3D imaging:
+
+The standard of art is LIDAR + imaging, which is already being used in the power line inspection space.
+
+* [Matterport](https://matterport.com/) seems to be the leading startup, but their most used interface isn't really a usable 3D model.  It's closer to Google maps ([see demo](https://matterport.com/industries/gallery/piedmont-heights-clubroom)).
+* The city of Christchurch worked with [AAM Group](http://www.aamgroup.com/index-nz.htm) to [use LIDAR and imaging](https://smartchristchurch.org.nz/project/christchurch-cbd-models-and-visualisations/) to create a [3D model of the city](http://cccbeforeafter.digitalnewzealand.info).
+* The [iPad 3D Camera/LIDAR system](https://www.theverge.com/2020/4/16/21223626/ipad-pro-halide-camera-lidar-sensor-augmented-reality-scanning) will be coming out on the iPhone 12 and seems like it will dramatically change this space.
+
+#### Power line imaging
+* The common solution is LIDAR + photography ([like this](https://greenvalleyintl.com/applications/power-line-inspection-using-airborne-lidar/))
+* [These people](https://www.flytechuav.com) [don't use LIDAR](https://www.suasnews.com/2019/08/how-photogrammetry-will-replace-lidar-in-transmission-line-inspections/).  They do not use LIDAR.  Their business model is to [sell the hardware](https://www.flytechuav.com/uav-birdie.html) which would be different than what I was thinking.
+* PG&E pays [~1.25bn / year to inspect power lines](https://www.courthousenews.com/utility-watchdog-oks-pge-wildfire-preventioin-plan/).
