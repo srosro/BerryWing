@@ -101,4 +101,4 @@ and add this line before ```exit 0``` at the end of rc.local:
 sudo -H -u pi /usr/bin/python3 /home/pi/berrywing/helloworld/shutdown-press.py &
 ```
 
-[More details here](https://github.com/TonyLHansen/raspberry-pi-safe-off-switch).s
+[More details here](https://github.com/TonyLHansen/raspberry-pi-safe-off-switch).

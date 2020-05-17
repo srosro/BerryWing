@@ -2,8 +2,10 @@
 from gpiozero import Button
 import os
 
-# The GPIO pin that the shutdown button
-# installed shorts to ground:
+# This file will initiate the Raspberry Pi shutdown sequence
+# when the user presess a physical button.
+
+# The GPIO pin that the shutdown button installed shorts to ground:
 SHUTDOWN_GPIO = 21
 
 Button(SHUTDOWN_GPIO).wait_for_press()
