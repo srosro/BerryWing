@@ -143,3 +143,12 @@ The standard of art is LIDAR + imaging, which is already being used in the power
 * The common solution is LIDAR + photography ([like this](https://greenvalleyintl.com/applications/power-line-inspection-using-airborne-lidar/))
 * [Flytech](https://www.flytechuav.com) [doesn't use LIDAR](https://www.suasnews.com/2019/08/how-photogrammetry-will-replace-lidar-in-transmission-line-inspections/).  They've built hardware & software close to what I'm thinking about - but it's not autonomous.  Their business model is to [sell the hardware](https://www.flytechuav.com/uav-birdie.html) which would be different than what I was thinking.
 * PG&E pays [~1.25bn / year to inspect power lines](https://www.courthousenews.com/utility-watchdog-oks-pge-wildfire-preventioin-plan/).
+
+Regarding geographic location: Seems like you'd want to consider geographies that have high fire risk and also are densely populated near forests with high property values.  Based [on this map](https://data.giss.nasa.gov/impacts/gfwed/), maybe options like this:
+* Western US (California, Montana, Utah Wyoming, Nevada)
+* Israel
+* Australia
+* Spain
+* Southern Italy
+
+California really does seem like the ideal location to do this, though.  There probably isn't a huge market beyond the annual spend of PG&E...
