@@ -122,8 +122,10 @@ Okay, going to take some time to write out what I know so far:
 * [Connecting Raspberry Pi w/ Pixhawk and Communicating via MAVLink Protocol](https://www.youtube.com/watch?v=DGAB34fJQFc) or [this video](https://www.youtube.com/watch?v=cZVNndOaYCE) both cover connecting to the original Pixhawk.
 
 
-#### Electric Human Flight:
+#### Electric human flight:
 Airbus, Rolls Royce, Wright Electric are all building prototypes - but nothing is close to production.
+
+In my opinion, this is the wrong place to start - as the startup is too far from profitability.  The winning play is to focus on autonomous fleets of small planes (like Zipline) as graduating to larger vehicles (and then vehicles that carry humans) is two incremental steps from there.
 
 * Also not yet in production, but supposedly [Otto Aviation](http://ottoaviation.com/) is building [an electric plane as efficient as a car](https://www.thedailybeast.com/this-weird-plane-could-be-the-prius-of-the-skies).
 *  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).  It's an interesting first use case for electric, since sorties are short and trainers compete on efficiency.
@@ -139,5 +141,5 @@ The standard of art is LIDAR + imaging, which is already being used in the power
 
 #### Power line imaging:
 * The common solution is LIDAR + photography ([like this](https://greenvalleyintl.com/applications/power-line-inspection-using-airborne-lidar/))
-* [These people](https://www.flytechuav.com) [don't use LIDAR](https://www.suasnews.com/2019/08/how-photogrammetry-will-replace-lidar-in-transmission-line-inspections/).  They do not use LIDAR.  Their business model is to [sell the hardware](https://www.flytechuav.com/uav-birdie.html) which would be different than what I was thinking.
+* [Flytech](https://www.flytechuav.com) [doesn't use LIDAR](https://www.suasnews.com/2019/08/how-photogrammetry-will-replace-lidar-in-transmission-line-inspections/).  They've built hardware & software close to what I'm thinking about - but it's not autonomous.  Their business model is to [sell the hardware](https://www.flytechuav.com/uav-birdie.html) which would be different than what I was thinking.
 * PG&E pays [~1.25bn / year to inspect power lines](https://www.courthousenews.com/utility-watchdog-oks-pge-wildfire-preventioin-plan/).
