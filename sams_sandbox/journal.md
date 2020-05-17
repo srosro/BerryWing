@@ -125,7 +125,8 @@ Okay, going to take some time to write out what I know so far:
 #### Electric Human Flight:
 Airbus, Rolls Royce, Wright Electric are all building prototypes - but nothing is close to production.
 
-*  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).
+* Also not yet in production, but supposedly [Otto Aviation](http://ottoaviation.com/) is building [an electric plane as efficient as a car](https://www.thedailybeast.com/this-weird-plane-could-be-the-prius-of-the-skies).
+*  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).  It's an interesting first use case for electric, since sorties are short and trainers compete on efficiency.
 * Not electric, but [Jetpack Aviation sells a human jetpack](https://jetpackaviation.com/jetpacks/).
 
 #### 3D imaging:
