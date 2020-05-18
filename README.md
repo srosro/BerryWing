@@ -15,9 +15,9 @@ I already have:
 * 64GB micro SD card
 * WIFI USB dongle
 
-I've bought:
+I've bought (edit - I wouldn't necessairly buy these things again):
 * [Breadboard, petentionometer switches, ultrasonic sensor, LCD screen, LEDs.](https://www.amazon.com/gp/product/B06W54L7B5) ([Manual](https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi))
-* [Accelerometer, Gyroscope, Magnetometer, Altitude, & Temperature Sensor](https://www.amazon.com/gp/product/B072MN8ZRC) ([Manual](https://ozzmaker.com/product/berryimu-accelerometer-gyroscope-magnetometer-barometricaltitude-sensor/)) <b>EDIT</b>: I now realize a [6 DOF sensor](https://www.amazon.com/HiLetgo-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B078SS8NQV) comes in the Freenove kit above, so you don't necessarily have to buy this to get started.  There's also [this 9 DOF version](https://www.amazon.com/HiLetgo-Gyroscope-Acceleration-Accelerator-Magnetometer/dp/B01I1J0Z7Y/) that's cheaper & widely supported.
+* [Accelerometer, Gyroscope, Magnetometer, Altitude, & Temperature Sensor](https://www.amazon.com/gp/product/B072MN8ZRC) ([Manual](https://ozzmaker.com/product/berryimu-accelerometer-gyroscope-magnetometer-barometricaltitude-sensor/))
 * [4G card with GPS](https://www.amazon.com/gp/product/B07PLXNVGZ) ([Manual](https://www.waveshare.com/w/upload/6/6d/SIM7600E-H-4G-HAT-Manual-EN.pdf))
 
 
