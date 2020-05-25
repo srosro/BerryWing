@@ -112,14 +112,20 @@ sudo -H -u pi /usr/bin/python3 /home/pi/berrywing/helloworld/shutdown-press.py &
 
 Okay, going to take some time to write out what I know so far:
 
-#### Autonomous flight:
+#### Startups in autonomous flight:
 * [Zipline](https://flyzipline.com/) is the leading startup in this space, and [now valued at 1BN+](https://www.cnbc.com/2019/05/17/zipline-medical-delivery-drone-start-up-now-valued-at-1point2-billion.html)
+* [Matternet](https://mttr.net/) is focused on automated drone delivery, but seems further behind Zipline.
+
+
+#### Useful proof-of-concept tech:
 * [Ardupilot](https://ardupilot.org/) is the leading open source community for autonomous drones.
 * [Pixhawk](https://pixhawk.org/) = an open source flight controller. Seems like a very useful interface between the Raspberry Pi and the control surfaces of the plane.
 * Ardupilot worked with Pixhawk to build the [Pixhawk 2.1 Cube](https://www.amazon.com/Standard-Carrier-Board-Pixhawk-2-1/dp/B071L846SN/), which was a massive improvement on the original [Pixhawk](https://www.amazon.com/Readytosky-Pixhawk-Controller-Autopilot-Splitter/dp/B07CHQ7SZ4?ref_=fsclp_pl_dp_1)
 * Ardupilot had a falling out with Pixhawk.  Pixhawk went on to build the Pixhawk 4, which seems to be [regarded as inferior to the Pixhawk 2.1 Cube](https://www.youtube.com/watch?v=C6WxNIzl8HU).
 * The leading option seems to be the [Pixhawk 2.1 Orange Cube](https://www.amazon.com/Orange-Standard-ADS-B-Carrier-Board/dp/B0842XYLGR/ref=pd_sbs_21_1/140-1966626-6294832)
 * [Connecting Raspberry Pi w/ Pixhawk and Communicating via MAVLink Protocol](https://www.youtube.com/watch?v=DGAB34fJQFc) or [this video](https://www.youtube.com/watch?v=cZVNndOaYCE) both cover connecting to the original Pixhawk.
+* [MAVLink](https://mavlink.nebraska.edu/psp/mavlink/NBO/HRMS/?cmd=login): A drone <-> ground control communication protocol.
+* [Dronekit](https://dronekit.io): a python interface for MAVLink.
 
 
 #### Electric human flight:
@@ -130,6 +136,7 @@ In my opinion, this is the wrong place to start - as the startup is too far from
 * Also not yet in production, but supposedly [Otto Aviation](http://ottoaviation.com/) is building [an electric plane as efficient as a car](https://www.thedailybeast.com/this-weird-plane-could-be-the-prius-of-the-skies).
 *  [ALPHA Electro](https://www.pipistrel-usa.com/alpha-electro/) is the first [FAA certified electric trainer](https://electrek.co/2018/04/27/all-electric-trainer-plane-airworthiness-certification-faa-us/).  It's an interesting first use case for electric, since sorties are short and trainers compete on efficiency.
 * Not electric, but [Jetpack Aviation sells a human jetpack](https://jetpackaviation.com/jetpacks/).
+* The [Ehang 184](https://www.ehang.com/ehangaav) seems to be the closest to a passenger autonomous drone.
 
 #### 3D imaging:
 
@@ -152,3 +159,18 @@ Regarding geographic location: Seems like you'd want to consider geographies tha
 * Southern Italy
 
 California really does seem like the ideal location to do this, though.  There probably isn't a huge market beyond the annual spend of PG&E...
+
+### Day 6 - The research continues...
+
+* I have successfully loaded Ardupilot firmware on the Pixhawk 2.1 Orange Cube, using QGroundControl.  I've been able to configure compass & accelerometer/gyroscope.
+* I'm having some trouble with APM Planner 2.0 on a mac, [documented here](https://discuss.ardupilot.org/t/ftdi-drivers-incompatible-with-max-os-x-10-15-4/56853).  Might need a netbook or something...
+* I need to [watch this video](https://www.youtube.com/watch?v=cZVNndOaYCE) about connecting the Raspberry Pi to the Pixhawk 2.1 Cube.  Also this [video looks interesting](https://www.youtube.com/watch?v=3ktSk3jGm4I) (a simulation).
+* This guide explains exactly what I'm looking to do: [Unlimited range HD streaming with LTE](https://discuss.ardupilot.org/t/unlimited-range-hd-streaming-with-lte/48670).  The Raspberry Pi can then handle increasing amounts of autopilot logic (for example, using signals from the video camera input to set the direction of the plan, tracking a power line).
+
+
+The [FLYSKY FS-i6X 10CH 2.4GHz RC Transmitter Controller](https://www.amazon.com/gp/product/B07Z8VCB45/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) that I purchased, I believe is compatible with the Pixhawk 2.1 Cube using either the PPM-Sum or IBUS protocols..See these links:
+* [FlySky Fs-IA6B Receiver](https://www.rcgroups.com/forums/showthread.php?2968555-FlySky-Fs-IA6B-Receiver)
+* [Compatible RC Transmitter and Receiver Systems](https://ardupilot.org/copter/docs/common-pixhawk-and-px4-compatible-rc-transmitter-and-receiver-systems.html)
+* [Using PPM for FlySky I6X Transmitter with I6B Reciever and NAZE32](https://www.youtube.com/watch?v=wBG4BgtGxLQ)
+* [Flysky FS-i6 6CH 2.4G AFHDS with Pixhawk and PX4?](https://diydrones.com/forum/topics/flysky-fs-i6-6ch-2-4g-afhds-with-pixhawk-and-px4)
+* [Good receiver with FlySky FS-i6 and Pixhawk or HK32Pilot Flight controller.](https://www.amazon.com/review/RFV9HKOWYYTS4/ref=cm_cr_srp_d_rdp_perm)
