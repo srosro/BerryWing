@@ -1,0 +1,10 @@
+#Waveshare 4G HAT
+pyserial 
+RPi.GPIO
+
+#BerryIMU
+lsm9ds1-rjg 
+RPi.GPIO
+
+#Shutdown button
+gpiozero
