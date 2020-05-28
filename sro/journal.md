@@ -26,7 +26,7 @@ We also need to start thinking about pitot tubes.  Looks like there's some prior
 
 Also... Ardupilot.  Holy smokes.  It's now the closest thing to the product we've considered.  The have a list of ready-to-fly options...
 
-Autonomous power line inspections with image processing might be a possible use case...[see this thread with my cousin Jeremy](https://github.com/srosro/BerryWing/blob/master/assets/autonomous-power-line-monitoring-use-case.png?raw=true).
+Autonomous power line inspections with image processing might be a possible use case...[see this thread with my cousin Jeremy](https://github.com/srosro/BerryWing/blob/master/sro/assets/autonomous-power-line-monitoring-use-case.png?raw=true).
 
 
 ### Day 3 - Problems with BerryIMUv2:
@@ -59,7 +59,7 @@ Found the problem: pins were not making secure contact with the board.
 
 Once I get my soldering gun, this will be a non-issue.  In the meantime, wedging a watch strap under the board to push it towards the pins fixed the issue:
 
-![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/watch-wedge.png)
+![Wiring diagram](https://raw.githubusercontent.com/srosro/BerryWing/master/sro/assets/watch-wedge.png)
 
 ```
 $ python ./python-BMP180-temperature-pressure/bmp180.py
@@ -180,7 +180,7 @@ The [FLYSKY FS-i6X 10CH 2.4GHz RC Transmitter Controller](https://www.amazon.com
 
 Got the Pixhawk 2.1 Cube working with the Flysky transmitter & FS-IA6B receiver.  Took some googling to get the receiver in PPM mode (vs PWM).  And some googling to match up the pins on Channel 1/PPM of the receiver with the Pixhawk RC In.
 
-![FS-iA6B_pixkhawk_2.1.png](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/FS-iA6B_pixkhawk_2.1.png)
+![FS-iA6B_pixkhawk_2.1.png](https://raw.githubusercontent.com/srosro/BerryWing/master/sro/assets/FS-iA6B_pixkhawk_2.1.png)
 
 Also got GPS & SMS working on the SIM7600G-H 4G HAT.  The comments about blinking LEDs [in their manual](https://www.waveshare.com/w/upload/6/6d/SIM7600E-H-4G-HAT-Manual-EN.pdf) are not accurate.  There are also a lot of typos/problems in their python [demo code](https://www.waveshare.com/wiki/File:SIM7600X-4G-HAT-Demo.7z):
 

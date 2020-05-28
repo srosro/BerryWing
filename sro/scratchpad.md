@@ -1,13 +1,17 @@
 ## Packages I'm installing that might be important.
-I should probably put these into a python environment...
+I should probably put these into a python environment... (EDIT: DONE!!)
 
-These might be useful to interface with the BerryIMU:
-* ```pip3 install lsm9ds1-rjg, RPi.GPIO```
+Maybe useful:
 
-For the shutdown button:
 ```
-apt-get install python3, python3-pip
-pip3 install gpiozero
+history | grep apt-get
+
+  10  sudo apt-get install modemstat
+  12  sudo apt-get install minicom
+  21  sudo apt-get install vim
+  27  sudo apt-get install p7zip-full
+  52  sudo apt-get install python3-pip
+  92  sudo apt-get install screen
 ```
 
 Also, this stuff:
@@ -28,6 +32,7 @@ history | grep apt-get
 255  apt-get install python3-pip
 256  sudo apt-get install python3-pip
 ```
+
 
 ## Different hardware options
 
