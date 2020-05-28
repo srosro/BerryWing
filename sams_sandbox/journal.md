@@ -174,3 +174,19 @@ The [FLYSKY FS-i6X 10CH 2.4GHz RC Transmitter Controller](https://www.amazon.com
 * [Using PPM for FlySky I6X Transmitter with I6B Reciever and NAZE32](https://www.youtube.com/watch?v=wBG4BgtGxLQ)
 * [Flysky FS-i6 6CH 2.4G AFHDS with Pixhawk and PX4?](https://diydrones.com/forum/topics/flysky-fs-i6-6ch-2-4g-afhds-with-pixhawk-and-px4)
 * [Good receiver with FlySky FS-i6 and Pixhawk or HK32Pilot Flight controller.](https://www.amazon.com/review/RFV9HKOWYYTS4/ref=cm_cr_srp_d_rdp_perm)
+
+
+### Day 7 - Progress messing with new hardware.
+
+Got the Pixhawk 2.1 Cube working with the Flysky transmitter & FS-IA6B receiver.  Took some googling to get the receiver in PPM mode (vs PWM).  And some googling to match up the pins on Channel 1/PPM of the receiver with the Pixhawk RC In.
+
+![FS-iA6B_pixkhawk_2.1.png](https://raw.githubusercontent.com/srosro/BerryWing/master/assets/FS-iA6B_pixkhawk_2.1.png)
+
+Also got GPS & SMS working on the SIM7600G-H 4G HAT.  The comments about blinking LEDs [in their manual](https://www.waveshare.com/w/upload/6/6d/SIM7600E-H-4G-HAT-Manual-EN.pdf) are not accurate.  There are also a lot of typos/problems in their python [demo code](https://www.waveshare.com/wiki/File:SIM7600X-4G-HAT-Demo.7z):
+
+* Broad Try/excepts
+* Need to change ttyS0 to AMA0 for RPi Model 2 B+
+* SMS: send and receive phone numbers are the same.  Breaks receive function.
+* FTP:
+    * Upload & download FTP functions seem the same
+    * Small typo: “form” vs from
