@@ -178,10 +178,12 @@ The [FLYSKY FS-i6X 10CH 2.4GHz RC Transmitter Controller](https://www.amazon.com
 
 ### Day 7 - Progress messing with new hardware.
 
+#### FS-IA6B receiver
 Got the Pixhawk 2.1 Cube working with the Flysky transmitter & FS-IA6B receiver.  Took some googling to get the receiver in PPM mode (vs PWM).  And some googling to match up the pins on Channel 1/PPM of the receiver with the Pixhawk RC In.
 
 ![FS-iA6B_pixkhawk_2.1.png](https://raw.githubusercontent.com/srosro/BerryWing/master/sro/assets/FS-iA6B_pixkhawk_2.1.png)
 
+#### SIM7600G-H 4G HAT
 Also got GPS & SMS working on the SIM7600G-H 4G HAT.  The comments about blinking LEDs [in their manual](https://www.waveshare.com/w/upload/6/6d/SIM7600E-H-4G-HAT-Manual-EN.pdf) are not accurate.  There are also a lot of typos/problems in their python [demo code](https://www.waveshare.com/wiki/File:SIM7600X-4G-HAT-Demo.7z):
 
 * Broad Try/excepts
@@ -190,3 +192,32 @@ Also got GPS & SMS working on the SIM7600G-H 4G HAT.  The comments about blinkin
 * FTP:
     * Upload & download FTP functions seem the same
     * Small typo: “form” vs from
+
+#### Raspberry Pi <> Pixhawk 2.1 comms
+Got the Raspberry Pi communicating w/ Pixhawk flight controller using [this video](https://www.youtube.com/watch?v=DGAB34fJQFc) and [these docs](https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html).
+
+However I haven't been able to successfully set a mode:
+```FBWA> APM: ArduPlane V4.0.5 (0bfa2638)
+APM: ChibiOS: d4fce84e
+APM: CubeOrange 004E003B 34385111 31373439
+APM: RCOut: PWM:1-12
+Mode FBWA
+mode
+FBWA> Available modes:  dict_keys(['MANUAL', 'CIRCLE', 'STABILIZE', 'TRAINING', 'ACRO', 'FBWA', 'FBWB', 'CRUISE', 'AUTOTUNE', 'AUTO', 'RTL', 'LOITER', 'TAKEOFF', 'AVOID_ADSB', 'GUIDED', 'INITIALISING', 'QSTABILIZE', 'QHOVER', 'QLOITER', 'QLAND', 'QRTL', 'QAUTOTUNE', 'QACRO'])
+mode QSTABILIZE
+FBWA> No mode mapping available
+```    
+
+Then I get into a situation where mode no longer works:
+```
+mode
+FBWA> No mode mapping available
+mode
+FBWA> No mode mapping available
+
+FBWA>
+FBWA> 2#W^bmode
+FBWA> No mode mapping available
+mode
+FBWA> No mode mapping available
+```
