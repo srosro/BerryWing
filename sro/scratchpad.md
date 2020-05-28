@@ -1,6 +1,13 @@
 ## Packages I'm installing that might be important.
 I should probably put these into a python environment... (EDIT: DONE!!)
 
+
+To connect to the Pixhawk: https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+
+`sudo apt-get install python3-dev python3-opencv python3-wxgtk3.0 libxml2-dev python3-pip python3-matplotlib python3-lxml`
+
+Edit: python3-wxgtk3.0 doesn't seem to exist.  python3-wxgtk4.0 does...
+
 Maybe useful:
 
 ```
