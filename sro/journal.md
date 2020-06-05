@@ -176,7 +176,7 @@ The [FLYSKY FS-i6X 10CH 2.4GHz RC Transmitter Controller](https://www.amazon.com
 * [Good receiver with FlySky FS-i6 and Pixhawk or HK32Pilot Flight controller.](https://www.amazon.com/review/RFV9HKOWYYTS4/ref=cm_cr_srp_d_rdp_perm)
 
 
-### Day 7 - Progress messing with new hardware.
+### Day 7 - Progress messing with new hardware:
 
 #### FS-IA6B receiver
 Got the Pixhawk 2.1 Cube working with the Flysky transmitter & FS-IA6B receiver.  Took some googling to get the receiver in PPM mode (vs PWM).  And some googling to match up the pins on Channel 1/PPM of the receiver with the Pixhawk RC In.
@@ -226,7 +226,7 @@ FBWA> No mode mapping available
 ```
 
 
-### Day 8 - Laser Rnagefinder.
+### Day 8 - Laser Rnagefinder:
 
 Bought a Benewake [TFMini](https://www.amazon.com/gp/product/B08276S74Z/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) and hooked it to the GPS2 serial port.  Used a few different resources to configure it:
 
@@ -246,3 +246,16 @@ I need to watch [this video by Painless360](https://www.youtube.com/watch?v=9Jgh
 * Correct center of gravity.
 * Calibrating servos/flight surfaces & confirm servos are 90 deg mechanically.
 * Setting correct flight modes & switching in/out of them.
+
+
+### Day 9 - Parrot Disco Totaled:
+
+I've crashed the Parrot Disco.  C.H.U.C.K. is damaged beyond repair. The Disco airframe, servos & motors look okay.
+
+![C.H.U.C.K. is totaled](https://raw.githubusercontent.com/srosro/BerryWing/master/sro/assets/CHUCK-totaled.png)
+
+
+I'm now toying with the idea of building a flight controller from scratch using the Raspberry Pi or Arduino Mega.  It looks like you can load ArduPlane 2.4 on an Arduino.  These articles are interesting:
+
+* [Archived: Loading the code onto APM2.x](https://ardupilot.org/dev/docs/load-the-code-onto-apm2x.html)
+* [Archived: Building ArduPilot for APM2.x on MacOS with Arduino](https://ardupilot.org/dev/docs/building-the-code-on-mac.html)
