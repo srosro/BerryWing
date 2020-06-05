@@ -183,6 +183,9 @@ Got the Pixhawk 2.1 Cube working with the Flysky transmitter & FS-IA6B receiver.
 
 ![FS-iA6B_pixkhawk_2.1.png](https://raw.githubusercontent.com/srosro/BerryWing/master/sro/assets/FS-iA6B_pixkhawk_2.1.png)
 
+According to [min 17:30 in this video](https://www.youtube.com/watch?v=0zTS_ZuHLb0&list=PLYsWjANuAm4qJ8Lko-3xiYNGb2Hh22rDw&index=2), you need to reverse pitch/elevator.  [min 1:00 in this video](https://www.youtube.com/watch?v=-xNJZd9CGNg) explains exactly how to do that in the FS-i6X.
+
+
 #### SIM7600G-H 4G HAT
 Also got GPS & SMS working on the SIM7600G-H 4G HAT.  The comments about blinking LEDs [in their manual](https://www.waveshare.com/w/upload/6/6d/SIM7600E-H-4G-HAT-Manual-EN.pdf) are not accurate.  There are also a lot of typos/problems in their python [demo code](https://www.waveshare.com/wiki/File:SIM7600X-4G-HAT-Demo.7z):
 
@@ -221,3 +224,25 @@ FBWA> No mode mapping available
 mode
 FBWA> No mode mapping available
 ```
+
+
+### Day 8 - Laser Rnagefinder.
+
+Bought a Benewake [TFMini](https://www.amazon.com/gp/product/B08276S74Z/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) and hooked it to the GPS2 serial port.  Used a few different resources to configure it:
+
+* [4 min mark of this video](https://www.youtube.com/watch?v=9ON-5qJTDk0) for wiring schematic.
+* [This PDF](https://www.mybotshop.de/Datasheet/TF_Series_Pixhawk.pdf) for the correct parameters, with the following notes/exceptions:
+ * GPS2 on Pixhawk 2.1 is `SERIAL4` parameter.
+ * Parameters that begin with `RNGFND_` should actually be `RNGFND1` on Pixhawk 2.1.
+* [According to this howto](https://ardupilot.org/copter/docs/common-benewake-tfmini-lidar.html), a few of the parameters in the above PDF are wrong:
+ * RNGFND1_MIN_CM = 30
+ * RNGFND1_MAX_CM = 600
+ * RNGFND1_TYPE = 20 (not 8 as in the PDF)
+* I will eventually need to enable `RNGFND_LANDING`, I would guess...
+
+
+I need to watch [this video by Painless360](https://www.youtube.com/watch?v=9Jgh6vXsx2E&list=PLYsWjANuAm4p6qzsdJ4Jtnh0dVIGS8jOp&index=4&t=0s) once I'm setting up the plane.  Things to be mindful of:
+
+* Correct center of gravity.
+* Calibrating servos/flight surfaces & confirm servos are 90 deg mechanically.
+* Setting correct flight modes & switching in/out of them.
