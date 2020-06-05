@@ -8,3 +8,8 @@ RPi.GPIO
 
 #Shutdown button
 gpiozero
+
+#Connection to Pixhawk 2.1 Cube
+future
+pymavlink
+mavproxy
